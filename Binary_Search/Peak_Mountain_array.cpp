@@ -3,7 +3,7 @@ using namespace std;
 
 int Mountain_peak(int arr[],int size ){
     int start = 0;
-    int end = size;
+    int end = size-1;
     int mid = start+(end-start)/2;
 
     while(start<end){
@@ -20,7 +20,7 @@ int Mountain_peak(int arr[],int size ){
 }
 
 int main(){
-   int arr[] = {3,4,5,1};
-   int ans = Mountain_peak(arr,3);
+   int arr[] = {1,2,3,4,1};
+   int ans = Mountain_peak(arr,5);
    cout<<"The peak is at index "<<ans;
 }

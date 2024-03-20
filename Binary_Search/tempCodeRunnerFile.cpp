@@ -1,0 +1,2 @@
+cout<<squreroot;
+// cout<<endl;
