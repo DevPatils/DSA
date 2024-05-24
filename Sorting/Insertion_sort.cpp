@@ -14,7 +14,7 @@ int Insertion_sort(int arr[], int n ){
                 break;
             }
         }
-        arr[j+1]=temp;
+        // arr[j+1]=temp;
     }
 
 }
@@ -25,8 +25,9 @@ int print_arr(int arr[],int n){
 }
 
 int main(){
-    int arr[7] = {10,1,7,4,8,2,11};
-    Insertion_sort(arr , 7);
-    print_arr(arr,7);
+    int arr[4] ={1,3,2,4};
+    Insertion_sort(arr,4);
+    print_arr(arr,4);
 
 }
+

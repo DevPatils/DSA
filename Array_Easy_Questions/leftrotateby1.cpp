@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include<vector>
 
 int rotate_by1(int arr[], int n ){
     int temp = arr[0];
@@ -44,7 +45,7 @@ int RotateKtimes(int arr[],int n,int k){
     for(int i = 0 ;i<rotate;i++){
         temp[i]=arr[n-i-1];
     }
-    for(int i =0;i<=rotate-1;i++){
+    for(int i =rotate;i<=n;i++){
         arr[i+rotate]=arr[i];
     }
     for(int i = 0;i<rotate;i++){
@@ -53,10 +54,29 @@ int RotateKtimes(int arr[],int n,int k){
     // printarr(arr,5);
     // printarr(temp,rotate);
 }
-
+    int majorityElement(vector<int> nums) {
+        int majority = nums.size()/2;
+        int maxi = nums[0];
+        for (int i = 1;i<nums.size();i++){
+            if(nums[i]>maxi){
+                maxi = nums[i];
+            }
+        }
+        vector<int>hash(maxi+1,0);
+        for(int i =0;i<=nums.size();i++){
+            hash[nums[i]]++;
+        }
+        for(int i = 0;i<=maxi;i++){
+            if(hash[i]>majority){
+                return i;
+            }
+        }
+        return -1;
+    }
 int main(){
-    int arr[6] = {1,2,3,4,5,6};
+    vector<int> arr= {1,2,3,4,5,6,7};
     // rotate_by1(arr,5);
-    RotateKtimes(arr,6,3);
-    printarr(arr,6);
+    int x = majorityElement(arr);
+    cout<<(x);
+    return 0;
 }

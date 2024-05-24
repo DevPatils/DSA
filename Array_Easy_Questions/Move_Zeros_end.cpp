@@ -12,7 +12,7 @@ void move_zeros(int arr[], int n){
     }
 
     // Fill the original array with the elements from the temp vector
-    
+     
     for(int i = 0 ; i < temp.size(); i++){
         arr[i] = temp[i];
     }
